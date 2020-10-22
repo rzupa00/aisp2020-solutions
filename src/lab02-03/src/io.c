@@ -58,15 +58,20 @@ int getDataFromUser(char* firstName, char* lastName, int* yearOfBirth) {
         USER_SUBMENU_CANCEL_STRING);
     printf("Please enter the required data:\n");
 
+    do {
+        printf("First name:\t");
+        scanf(" %s", firstName);
+    } while (strlen(firstName) == 0);
+    
+    do {
+        printf("Last name:\t");
+        scanf(" %s", lastName);
+    } while (strlen(lastName) == 0);
 
-    printf("First name:\t");
-    scanf(" %s", firstName);
-
-    printf("Last name:\t");
-    scanf(" %s", lastName);
-
-    printf("Year of birth:\t");
-    scanf(" %d", yearOfBirth);
+    do {
+        printf("Year of birth:\t");
+        scanf(" %d", yearOfBirth);
+    } while ((*yearOfBirth) == 0);
 
     return RETURN_OK;
 }
