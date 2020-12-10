@@ -18,7 +18,7 @@ typedef node* position;
 struct _node
 {
     int element;
-    position *next;
+    position next;
 };
 
 
